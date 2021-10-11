@@ -1,3 +1,5 @@
+/!\ Ce code a été fait sur Processing 3.5, il risque de ne pas bien fonctionner sur le 4.0 /!\
+
 # Figures_Lisajous
 Les variables sont définies en haut et servent à manipuler le graphique :
 - circlesnumX : Nombre de cercles sur l'axe X (en haut)
