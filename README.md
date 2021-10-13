@@ -8,3 +8,4 @@ Les variables sont définies en haut et servent à manipuler le graphique :
 - size : Taille des cercles (au cas où il y en aurait plus que 5 x 5 ou que la fenêtre a été redimensionnée)
 - startspeedX : Vitesse du cercle initial sur l'axe X (en haut à gauche)
 - startspeedX : Vitesse du cercle initial sur l'axe Y (en haut à gauche)
+- showspeed : Affiche ou non en couleur selon la dérivée du sin et du cos (la vitesse en X et en Y du point)

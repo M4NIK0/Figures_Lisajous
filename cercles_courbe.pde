@@ -1,8 +1,9 @@
 float tetha = 0;
 int circlesnumX = 5, circlesnumY = 5, x = 0, y =0;
 float size = 1;
-float details = 200;
-float startspeedX = 1, startspeedY = 1;
+float details = 100;
+float startspeedX = 1, startspeedY = 5;
+boolean showspeed = true;
 
 void setup() {
  background(0, 0, 0);   
@@ -43,7 +44,11 @@ void draw() {
     ellipse((sin(tetha * (x + startspeedX)) * 50 + 150 + 150 * x) * size, (cos(tetha * (y + startspeedY)) * 50 + 100 + 150 * y) * size, 10 * size, 10 * size);
     
     for (int i = 0; i < details; i++) { //Traçage des trajectoires
-      stroke(255);  
+      if (showspeed == true) {
+        stroke(abs(cos((tetha + i/details * TWO_PI) * (x + startspeedX))) * 255, abs(sin((tetha + i/details * TWO_PI) * (x + startspeedX))) * 255, 0);
+      } else {
+        stroke(255);
+      }
       line((sin((tetha + i/details * TWO_PI) * (x + startspeedX)) * 50 + 150 + 150 * x) * size, (cos((tetha + i/details * TWO_PI) * (y + startspeedY)) * 50 + 100 + 150 * y) * size,
       (sin((tetha + (i + 1)/details * TWO_PI) * (x + startspeedX)) * 50 + 150 + 150 * x) * size, (cos((tetha + (i + 1)/details * TWO_PI) * (y + startspeedY)) * 50 + 100 + 150 * y) * size);
     }
